@@ -1,0 +1,35 @@
+@use "variables" as var;
+
+@mixin respond($breakpoint) {
+    @if($breakpoint == medium) {
+        @media(max-width: 900px) {
+            @content;
+        }
+    }
+    @if($breakpoint == small) {
+        @media(max-width: 600px) {
+            @content;
+        }
+    }
+
+}
+
+@mixin white-button {
+    color: var.$button-font1;
+    border: 1px solid var.$button-frame1;
+    background-color: var.$button-bg1;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@mixin gray-button {
+    color: var.$button-font2;
+    border: 1px solid var.$button-frame2;
+    background-color: var.$button-bg2;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
